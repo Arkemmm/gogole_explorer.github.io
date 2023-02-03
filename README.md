@@ -1,3 +1,3 @@
-# gogole_v1.0.0
+# gogole_v1.1
 
 Version expérimentale.
