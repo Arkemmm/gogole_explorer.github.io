@@ -1,7 +1,7 @@
-# gogole_v1.1
+# gogole_explorer
 
 Projet expérimental, réalisé en début 2023.
 
-Derniers ajouts : 
+Derniers ajouts (Version 1.1)
 - Une loupe pour naviguer
 
