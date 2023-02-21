@@ -1,274 +1,176 @@
 /* Style de la page  */
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Pied de page */
-  .footer {
-    background-color: #212121;
-    color: #f5f5f5;
-    height: 10%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-  }
-  
-  /* Style des boutons de la page */
-  .button {
-    position: absolute;
-    bottom: 15%;
-    right: 41%;
-    left: 41%;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    color: #202124;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #f5f5f5;
-    transition: all 0.3s ease-out;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-  .button:hover {
-    background: #1f1f1f;
-    color: #e5e5e5;
-  }
-  
-  /* Overlay pour les données d'utilisation */
-  .overlay {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    transition: opacity 0.6s;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  /* Conteneur des données d'utilisation */
-  .popup {
-    margin: 6rem auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    width: 62%;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  /* Bouton de fermeture de la fenêtre popup */
-  .popup .cross {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    transition: 0.3s ease-out;
-  }
-  .popup .cross:hover {
-    color: #db0505;
-  }
-  
-  /* Style de l'icône de recherche */
-  input[type="submit"][value="    "] {
-    background-image: url(loupe.png);
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    border: none;
-  }
-  
-  /* Style de l'image */
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Style du formulaire de recherche */
-  form {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
-  }
-  
-  /* Style des champs de saisie */
-  input[type="text"] {
-    padding: 12px 20px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    width: 60%;
-    margin-right: 10px;
-    border-radius: 999px;
-  }
-  
-/* Style des boutons de recherche */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+
+
+/* Style du pied de page */
+.footer {
+  background-color: #212121;
+  color: #f5f5f5;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* BARRE DE RECHERCHE : Style de la barre de recherche */
+
+form {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Style des champs de saisie */
+input[type="text"] {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  width: 60%;
+  margin-right: 10px;
+  border-radius: 999px;
+}
+
+
+
+
+/* PARTIE BOUTON : Style des boutons de la page */
+
+/* Style des boutons de recherche loupe */
+input[type="submit"][value="    "] {
+  background-image: url(loupe.png);
+  background-color: #ffffff;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: none;
+  box-shadow: none;
+  transition: none;
+  animation: none;
+}
+
+/* Style des boutons de recherche "Recherche Gogole" et "J'ai de la chance" */
 input[type="submit"] {
-    padding: 12px 20px;
-    background-color: #f8f9fa;
-    font-size: 17px;
-    color: #202124;
-    border: none;
-    margin: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #f5f5f5;
-    transition: all 0.3s ease-out;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-  input[type="submit"]:hover {
-    background-color: #202124;
-    color: #f8f9fa;
-  }
-  
-  /* Style des titres */
-  h2 {
-    font-family: "Courier New", courier, monospace;
-    color: dodgerblue;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  /* Style des liens */
-  a {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  /* Style des iframes */
-  iframe {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  /* Style de la popup */
-  .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); 
-    transition: opacity 1s;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  .popup {
-    margin: 6rem auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    width: 62%;
-    position: relative;
-    transition: all 1s ease-in-out;
-  }
-  .popup .cross {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    transition: 1s ease-out;
-  }
-  .popup .cross:hover {
-    color: #db0505;
-  }
-  
-  /* Style de la section des données d'utilisation du site */
-  .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-  .section h3 {
-    font-family: "Courier New", courier, monospace;
-    color: #202124;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .section p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #4f4f4f;
-    text-align: center;
-  }
-  .section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 2rem;
-  }
-  .section ul li {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: #4f4f4f;
-    margin-bottom: 1rem;
-  }
-  .section ul li:before {
-    content: "• ";
-    color: #f44336;
-  }
-  
-  /* Style du pied de page */
-  .footer {
-    background-color: #212121;
-    color: #f5f5f5;
-    height: 10%;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
-  
-  .footer a {
-    color: #f5f5f5;
-    text-decoration: none;
-    margin-left: 5px;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
+  padding: 12px 20px;
+  background-color: #f8f9fa;
+  font-size: 17px;
+  color: #202124;
+  border: none;
+  margin: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #f5f5f5;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+/* Style de l'annimation quand on passe la souris sur un bouton */
+input[type="submit"]:hover {
+  background-color: #202124;
+  color: #f8f9fa;
+  transition: ease-in;
+}
+
+
+
+
+
+/* POPUP : Bouton des conditions d'utilsation des données */
+
+.button {
+  position: absolute;
+  bottom: 15%;
+  right: 41%;
+  left: 41%;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  color: #202124;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #f5f5f5;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.button:hover {
+  background: #1f1f1f;
+  color: #e5e5e5;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Style de l'affichage de la fenêtre Popup */
+.popup {
+  margin: 6rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  width: 62%;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Bouton de fermeture de la fenêtre popup */
+.popup .cross {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s ease-out;
+}
+
+.popup .cross:hover {
+  color: #d00000;
+}
+
+/* Style des titres */
+h2 {
+  font-family: "Courier New", courier, monospace;
+  color: dodgerblue;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
