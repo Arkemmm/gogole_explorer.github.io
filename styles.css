@@ -1,168 +1,274 @@
-/* Le style général de la page */
+/* Style de la page  */
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-color: #fffffb;
+    background-color: #ffffff;
     text-align: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-/* Positon du logo Gogole */
-.box {
-    margin-top: 15%;
-}
-/* Style du bas de page (footer) */
-.footer {
+    min-height: 100vh;
+  }
+  
+  /* Pied de page */
+  .footer {
     background-color: #212121;
     color: #f5f5f5;
     height: 10%;
     width: 100%;
-    bottom: 0px;
     position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-}
-/* Style des boutons */
-.button{
-    background-color: #F2F2F2;
-    border: none;
-    font-size: 1.2rem;
-    padding: 1rem;
-    color: #1f1f1f;
+  }
+  
+  /* Style des boutons de la page */
+  .button {
     position: absolute;
-    bottom: 4%;
-    right: 35%;
-    left: 35%;
-    border-radius: 24px;
+    bottom: 15%;
+    right: 41%;
+    left: 41%;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    color: #202124;
+    border: none;
+    border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
+    background: #f5f5f5;
     transition: all 0.3s ease-out;
-    text-shadow: none;
-    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3);
-}
-.button:hover {
-    background: #e0e0e0;
-    color: #1a73e8;
-    text-decoration: none;
-    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 1px 2px 0 rgba(60, 64, 67, 0.24);
-}
-
-
-.overlay{
-    position: fixed;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .button:hover {
+    background: #1f1f1f;
+    color: #e5e5e5;
+  }
+  
+  /* Overlay pour les données d'utilisation */
+  .overlay {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-   background: rgba(0, 0, 0, 0.7); 
-   transition: opacity .4s;
-   visibility: hidden;
-   opacity: 0;
-}
-
-
-
-
-.overlay:target{
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.6s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
     visibility: visible;
     opacity: 1;
-
-}
-.popup {
+  }
+  
+  /* Conteneur des données d'utilisation */
+  .popup {
     margin: 6rem auto;
     padding: 2rem;
     background: #fff;
     border-radius: 10px;
     width: 62%;
     position: relative;
-    transition: all 0,4s ease-in-out;
-}
-.popup .cross {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Bouton de fermeture de la fenêtre popup */
+  .popup .cross {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
-    color: #262626;
-    transition: 0,4s ease-out;
-}
-.popup .cross:hover{
+    color: #333;
+    transition: 0.3s ease-out;
+  }
+  .popup .cross:hover {
     color: #db0505;
-}
-input[type="submit"][value="    "] {
+  }
+  
+  /* Style de l'icône de recherche */
+  input[type="submit"][value="    "] {
     background-image: url(loupe.png);
     background-size: cover;
     width: 40px;
     height: 40px;
     border: none;
-    box-shadow: none;
-    
-}
-
-/* Style de l'image */
-img {
+  }
+  
+  /* Style de l'image */
+  img {
     display: block;
     margin: 0 auto;
-}
-
-/* Style du formulaire de recherche */
-form {
+  }
+  
+  /* Style du formulaire de recherche */
+  form {
     width: 80%;
     margin: 50px auto;
     text-align: center;
-}
-
-/* Style des champs de saisie */
-input[type="text"] {
+  }
+  
+  /* Style des champs de saisie */
+  input[type="text"] {
     padding: 12px 20px;
     font-size: 18px;
     border: 1px solid #ccc;
     width: 60%;
     margin-right: 10px;
     border-radius: 999px;
-}
-
-
+  }
+  
 /* Style des boutons de recherche */
 input[type="submit"] {
     padding: 12px 20px;
-    background-color: #F8F9FA;
-    color: white;
-    border: 1px solid #ccc;
-    font-size: 18px;
-    color: #202124; 
-    cursor: pointer;
+    background-color: #f8f9fa;
+    font-size: 17px;
+    color: #202124;
+    border: none;
     margin: 10px;
-    border-radius: 999px;
-    box-shadow: #1f1f1f;
-}
-
-/* Style des titres */
-h2 {
-    text-align: center;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #f5f5f5;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  input[type="submit"]:hover {
+    background-color: #202124;
+    color: #f8f9fa;
+  }
+  
+  /* Style des titres */
+  h2 {
     font-family: "Courier New", courier, monospace;
-    color: DodgerBlue;
-}
-
-/* Style des liens */
-a {
+    color: dodgerblue;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Style des liens */
+  a {
     color: blue;
     text-decoration: none;
-}
-
-/* Style des iframes */
-iframe {
+  }
+  
+  /* Style des iframes */
+  iframe {
     display: inline-block;
     margin-right: 10px;
-}
-/* Style du formulaire de recherche */
-form {
-  width: 80%;
-  margin: 50px auto;
-}
+    margin-bottom: 1rem;
+  }
+  
+  /* Style de la popup */
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    transition: opacity 1s;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    width: 62%;
+    position: relative;
+    transition: all 1s ease-in-out;
+  }
+  .popup .cross {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: 1s ease-out;
+  }
+  .popup .cross:hover {
+    color: #db0505;
+  }
+  
+  /* Style de la section des données d'utilisation du site */
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .section h3 {
+    font-family: "Courier New", courier, monospace;
+    color: #202124;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4f4f4f;
+    text-align: center;
+  }
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+  }
+  .section ul li {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #4f4f4f;
+    margin-bottom: 1rem;
+  }
+  .section ul li:before {
+    content: "• ";
+    color: #f44336;
+  }
+  
+  /* Style du pied de page */
+  .footer {
+    background-color: #212121;
+    color: #f5f5f5;
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
